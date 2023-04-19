@@ -11,7 +11,6 @@ export const state = reactive({
             .then((response) => {
                 console.log(response);
                 this.movies = response.data.results
-                this.info = response.data.info
             })
             .catch((error) => {
                 console.log(error);
