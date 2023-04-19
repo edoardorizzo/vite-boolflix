@@ -9,7 +9,7 @@ export default {
   methods: {
     searchMovies() {
       console.log(this.state.searchText);
-      const url = this.state.URL_API + `?name=${this.state.searchText}`
+      const url = `https://api.themoviedb.org/3/search/multi?api_key=d94700216696537359e360c15ede3654&language=en-US&query=` + `?name=${this.state.searchText}` + `&page=1&include_adult=false`
       this.state.callApi(url)
     },
     getLanguageName(language) {
