@@ -18,7 +18,7 @@ export default {
     
 <template>
   <div>
-    <input type="text" v-model="state.searchText" placeholder="Search movie title...">
+    <input @keyup.enter="searchMovies" type="text" v-model="state.searchText" placeholder="Search movie title...">
     <button @click="searchMovies">Search</button>
     <ul>
       <li v-for="movie in state.movies">
