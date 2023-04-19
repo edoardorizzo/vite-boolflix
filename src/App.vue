@@ -1,5 +1,4 @@
 <script>
-import { onMounted } from 'vue';
 import { state } from './state.js'
 export default {
   data() {
@@ -36,10 +35,12 @@ export default {
     <button @click="searchMovies">Search</button>
     <ul>
       <li v-for="movie in state.movies">
+        <!-- if condition for title or name -->
         <h4 v-if="movie.title">{{ movie.title }}</h4>
         <h4 v-else>{{ movie.name }}</h4>
-        <!-- <img :src="`./{{ movie.poster }}`" alt=""> -->
-        <p>{{ movie.original_title }}</p>
+        
+        <img :src="`${state.coverUrl}${movie.poster_path}`" alt="">
+        <p v-if="movie.original_title">{{ movie.original_title }}</p>
         <p>{{ getLanguageName(movie.original_language) }}</p>
         <p>{{ movie.vote_average }}</p>
       </li>

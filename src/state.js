@@ -4,6 +4,7 @@ import { reactive } from 'vue';
 export const state = reactive({
     searchText: '',
     movies: null,
+    coverUrl: "https://image.tmdb.org/t/p/w342",
     callApi(url) {
         axios
             .get(url)
