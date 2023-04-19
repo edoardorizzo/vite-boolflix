@@ -3,7 +3,7 @@ import { reactive } from 'vue';
 
 export const state = reactive({
     searchText: '',
-    movies: [],
+    movies: null,
     callApi(url) {
         axios
             .get(url)

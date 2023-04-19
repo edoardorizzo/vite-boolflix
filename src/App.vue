@@ -1,4 +1,5 @@
 <script>
+import { onMounted } from 'vue';
 import { state } from './state.js'
 export default {
   data() {
@@ -9,7 +10,7 @@ export default {
   methods: {
     searchMovies() {
       console.log(this.state.searchText);
-      const url = `https://api.themoviedb.org/3/search/multi?api_key=d94700216696537359e360c15ede3654&language=en-US&query=` + `?name=${this.state.searchText}` + `&page=1&include_adult=false`
+      const url = `https://api.themoviedb.org/3/search/multi?api_key=d94700216696537359e360c15ede3654&-US&query=?name=${this.state.searchText}&page=1&include_adult=false`
       this.state.callApi(url)
     },
     getLanguageName(language) {
@@ -25,17 +26,19 @@ export default {
       return languageMap[language] || 'Sconosciuto'
 
     }
-  }
+  },
 }
 </script>
     
 <template>
   <div>
-    <input @keyup.enter="searchMovies" type="text" v-model="state.searchText" placeholder="Search movie title...">
+    <input @keyup.enter="searchMovies" type="text" v-model="state.searchText" placeholder="Insert movie o Tv Show...">
     <button @click="searchMovies">Search</button>
     <ul>
       <li v-for="movie in state.movies">
-        <h4>{{ movie.title }}</h4>
+        <h4 v-if="movie.title">{{ movie.title }}</h4>
+        <h4 v-else>{{ movie.name }}</h4>
+        <!-- <img :src="`./{{ movie.poster }}`" alt=""> -->
         <p>{{ movie.original_title }}</p>
         <p>{{ getLanguageName(movie.original_language) }}</p>
         <p>{{ movie.vote_average }}</p>
