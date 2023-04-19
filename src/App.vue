@@ -7,10 +7,23 @@ export default {
     }
   },
   methods: {
-    searchMovies(){
+    searchMovies() {
       console.log(this.state.searchText);
       const url = this.state.URL_API + `?name=${this.state.searchText}`
       this.state.callApi(url)
+    },
+    getLanguageName(language) {
+      const languageMap = {
+        en: '🇬🇧',
+        es: '🇪🇸',
+        fr: '🇫🇷',
+        it: '🇮🇹',
+        ja: '🇯🇵',
+        pt: '🇵🇹'
+
+      }
+      return languageMap[language] || 'Sconosciuto'
+
     }
   }
 }
@@ -24,7 +37,8 @@ export default {
       <li v-for="movie in state.movies">
         <h4>{{ movie.title }}</h4>
         <p>{{ movie.original_title }}</p>
-        <p>{{ movie.original_language }}</p>
+        <p>{{ getLanguageName(movie.original_language) }}</p>
+        <p>{{ movie.vote_average }}</p>
       </li>
     </ul>
   </div>
