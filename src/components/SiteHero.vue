@@ -20,7 +20,7 @@ export default {
             <h1>Scopri un mondo fantastico!</h1>
             <p>Goditi i migliori <strong>Film</strong> e <strong>Serie Tv</strong> grazie al servizio <strong>BoolFlix</strong>, servizio streaming <strong>completamente gratuito</strong>  ed indipendente che nulla ha a che fare con un noto servizio di streaming con un nome simile ma non troppo!</p>
             <div class="input_container">
-                <input @keyup.enter="state.searchMovies" type="text" v-model="state.searchText"
+                <input  @keyup.enter="state.searchMovies" type="text" v-model="state.searchText"
                     placeholder="Insert movie o Tv Show...">
                 <button @click="state.searchMovies">Search</button>
             </div>
@@ -40,7 +40,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
-    padding: 8rem 4rem;
+    padding: 6rem 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,15 +66,16 @@ export default {
     input {
         border-radius: 1rem;
         border: 2px solid $dark-blue;
-        width: 240px;
+        width: 70%;
         padding: 0.25rem;
+        margin-right: 1rem;
     }
 
     button {
         border-radius: 1rem;
         border: none;
         background-color: $green;
-        width: 120px;
+        width: 30%;
         color: $white;
         padding: 0.25rem;
     }
