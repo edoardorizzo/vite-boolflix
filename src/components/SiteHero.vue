@@ -60,13 +60,13 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        max-width: 600px;
+        max-width: 800px;
     }
 
     input {
         border-radius: 1rem;
         border: 2px solid $dark-blue;
-        width: 70%;
+        width: 75%;
         padding: 0.25rem;
         margin-right: 1rem;
     }
@@ -75,7 +75,7 @@ export default {
         border-radius: 1rem;
         border: none;
         background-color: $green;
-        width: 30%;
+        width: 25%;
         color: $white;
         padding: 0.25rem;
     }
