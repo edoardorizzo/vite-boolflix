@@ -16,4 +16,24 @@ export const state = reactive({
                 console.log(error);
             });
     },
+    searchMovies() {
+        console.log(this.searchText);
+        const url = `https://api.themoviedb.org/3/search/multi?api_key=d94700216696537359e360c15ede3654&-US&query=?name=${this.searchText}&page=1&include_adult=false`
+        this.callApi(url)
+    },
+    getLanguageName(language) {
+        const languageMap = {
+            en: '🇬🇧',
+            es: '🇪🇸',
+            fr: '🇫🇷',
+            it: '🇮🇹',
+            ja: '🇯🇵',
+            pt: '🇵🇹'
+
+        }
+        return languageMap[language] || 'Sconosciuto'
+    },
+    roundNumber(rating) {
+        return Math.ceil(rating / 2);
+    },
 }) 
