@@ -44,6 +44,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.5rem;
 
     h1 {
         color: $white;

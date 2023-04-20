@@ -21,10 +21,10 @@ export default {
             <SiteMovie :movie="movie" v-for="movie in state.movies"></SiteMovie>
         </div>
     </div>
-
-    
 </template>
 
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/partials/partials.scss' as *;
+</style>
