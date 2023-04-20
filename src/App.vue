@@ -24,6 +24,9 @@ export default {
       }
       return languageMap[language] || 'Sconosciuto'
     },
+    roundNumber(rating) {
+      return Math.ceil(rating / 2);
+    },
   },
 }
 </script>
@@ -34,15 +37,15 @@ export default {
     <button @click="searchMovies">Search</button>
     <ul>
       <li v-for="movie in state.movies">
-        
+
         <h4 v-if="movie.title">{{ movie.title }}</h4>
         <h4 v-else>{{ movie.name }}</h4>
-        
+
         <img :src="`${state.coverUrl}${movie.poster_path}`" alt="">
 
         <p v-if="movie.original_title">{{ movie.original_title }}</p>
         <p>{{ getLanguageName(movie.original_language) }}</p>
-        <p class="vote_movie">{{ movie.vote_average }}</p>
+        <p>{{ roundNumber(movie.vote_average) }} ⭐️</p>
       </li>
     </ul>
   </div>
