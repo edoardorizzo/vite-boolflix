@@ -42,10 +42,11 @@ export default {
 .card_container {
     margin-bottom: 1.5rem;
     height: 100%;
+    margin-top: 2rem;
 }
 
 .card {
-    background-color: $dark-blue;
+    background-color: transparent;
     color: $white;
     border: none;
 

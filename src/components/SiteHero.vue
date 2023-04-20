@@ -44,7 +44,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
 
     h1 {
         color: $white;
@@ -66,16 +65,18 @@ export default {
 
     input {
         border-radius: 1rem;
-        border: 2px solid $dark-blue;
+        border: none;
         width: 75%;
         padding: 0.25rem;
         margin-right: 1rem;
+        filter: drop-shadow(0px 0px 5px $shadow-blue);
     }
 
     button {
         border-radius: 1rem;
         border: none;
         background-color: $green;
+        filter: drop-shadow(0px 0px 5px $shadow-blue);
         width: 25%;
         color: $white;
         padding: 0.25rem;
