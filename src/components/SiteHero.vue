@@ -15,18 +15,22 @@ export default {
 </script>
 
 <template>
-    <div class="hero">
-        <div class="hero_elements">
-            <h1>Scopri un mondo fantastico!</h1>
-            <p>Goditi i migliori <strong>Film</strong> e <strong>Serie Tv</strong> grazie al servizio <strong>BoolFlix</strong>, servizio streaming <strong>completamente gratuito</strong>  ed indipendente che nulla ha a che fare con un noto servizio di streaming con un nome simile ma non troppo!</p>
-            <div class="input_container">
-                <input  @keyup.enter="state.searchMovies" type="text" v-model="state.searchText"
-                    placeholder="Insert movie o Tv Show...">
-                <button @click="state.searchMovies">Search</button>
+    <div class="container">
+        <div class="hero">
+            <div class="hero_elements">
+                <h1>Scopri un mondo fantastico!</h1>
+                <p>Goditi i migliori <strong>Film</strong> e <strong>Serie Tv</strong> grazie al servizio
+                    <strong>BoolFlix</strong>, servizio streaming <strong>completamente gratuito</strong> ed indipendente
+                    che nulla ha a che fare con un noto servizio di streaming con un nome simile ma non troppo!</p>
+                <div class="input_container">
+                    <input @keyup.enter="state.searchMovies" type="text" v-model="state.searchText"
+                        placeholder="Insert movie o Tv Show...">
+                    <button @click="state.searchMovies">Search</button>
+                </div>
             </div>
+
+
         </div>
-
-
     </div>
 </template>
 
@@ -40,17 +44,19 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
-    padding: 6rem 4rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1rem;
+    filter: drop-shadow(0px 0px 5px $shadow-blue);
 
     h1 {
         color: $white;
         margin-bottom: 1rem;
     }
 
-    p{
+    p {
         color: $white;
         font-size: 14px;
         margin-bottom: 2rem;

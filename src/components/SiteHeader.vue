@@ -17,8 +17,8 @@ export default {
 
 header{
     height: 40px;
-    padding: 0.5rem;
-    background-color: $dark-blue;
+    padding: 1rem;
+    margin-bottom: 1rem;
 
     .logo_container{
         width: 160px;

@@ -56,6 +56,7 @@ export default {
         img {
             width: 100%;
             border-radius: 1rem;
+            filter: drop-shadow(0px 0px 5px $shadow-blue);
 
             &:hover {
                 filter: drop-shadow(0px 0px 10px $white);

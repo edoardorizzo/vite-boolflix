@@ -20,6 +20,7 @@ export default {
         <div class="row">
             <SiteMovie :movie="movie" v-for="movie in state.movies"></SiteMovie>
         </div>
+        
     </div>
 </template>
 
