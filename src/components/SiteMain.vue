@@ -10,6 +10,11 @@ export default {
         return {
             state
         }
+    },
+    methods: {
+        getResults() {
+            return this.state.movies.length
+        }
     }
 }
 </script>
@@ -17,10 +22,11 @@ export default {
 
 <template>
     <div class="container">
-        <div class="row">
+        <div class="site_main row">
+            <h6 v-if="state.movies">Risultati di ricerca: {{ getResults() }}</h6>
             <SiteMovie :movie="movie" v-for="movie in state.movies"></SiteMovie>
         </div>
-        
+
     </div>
 </template>
 
@@ -28,4 +34,13 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/partials/partials.scss' as *;
+
+.site_main {
+    margin-top: 3rem;
+
+    h6 {
+        color: $white;
+
+    }
+}
 </style>

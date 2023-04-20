@@ -42,7 +42,6 @@ export default {
 .card_container {
     margin-bottom: 1.5rem;
     height: 100%;
-    margin-top: 2rem;
 }
 
 .card {
@@ -90,12 +89,5 @@ export default {
             }
         }
     }
-
-
-
-
-
-
-
 }
 </style>
