@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/partials/partials.scss' as *;
 
-.site_main {
+.ssite_main {
     margin-top: 3rem;
 
     h6 {

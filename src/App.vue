@@ -22,8 +22,8 @@ export default {
 <template>
   <SiteHeader></SiteHeader>
   <SiteHero></SiteHero>
-  <SiteCards></SiteCards>
   <SiteMain></SiteMain>
+  <SiteCards></SiteCards>
 </template>
     
 <style lang="scss" scoped></style>
