@@ -46,33 +46,47 @@ export default {
 
 .card {
     background-color: transparent;
-    color: $white;
+    color: $dark-blue;
     border: none;
 
     .img_container {
         margin-bottom: 1rem;
+        position: relative;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 10px $white);
+            transition: all .2s ease-in-out;
+        }
 
         img {
             width: 100%;
             border-radius: 1rem;
             filter: drop-shadow(0px 0px 5px $shadow-blue);
-
-            &:hover {
-                filter: drop-shadow(0px 0px 10px $white);
-            }
         }
+    }
 
-
+    .img_container:hover+.text_container {
+        display: flex;
+        transform: translateY(0);
+        transition: all 2s ease-in-out;
     }
 
     .text_container {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background-color: $white;
+        bottom: 0;
+        padding: 0.5rem;
 
         h4 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
+            color: $dark-green;
         }
 
         p {

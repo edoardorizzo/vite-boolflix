@@ -31,7 +31,7 @@ export const state = reactive({
             pt: '🇵🇹'
 
         }
-        return languageMap[language] || 'Sconosciuto'
+        return languageMap[language] || '//'
     },
     roundNumber(rating) {
         return Math.ceil(rating / 2);
