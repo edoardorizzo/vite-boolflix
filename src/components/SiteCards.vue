@@ -48,7 +48,7 @@ export default {
 @use '../assets/partials/partials.scss' as *;
 
 .site_card_component{
-    margin-top: 3rem;
+    margin-top: 1rem;
 
     .col{
         margin-top: 1rem;

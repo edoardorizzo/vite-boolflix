@@ -18,7 +18,7 @@ export const state = reactive({
     },
     searchMovies() {
         console.log(this.searchText);
-        const url = `https://api.themoviedb.org/3/search/multi?api_key=d94700216696537359e360c15ede3654&-US&query=?name=${this.searchText}&page=1&include_adult=false`
+        const url = `https://api.themoviedb.org/3/search/multi?api_key=d94700216696537359e360c15ede3654&language=en-US&query=${this.searchText}&page=1&include_adult=falsea`
         this.callApi(url)
     },
     getLanguageName(language) {

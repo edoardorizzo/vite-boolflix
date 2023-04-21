@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-    <div class="card_container col-sm-6 col-md-4 col-lg-3">
+    <div class="card_container col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
         <div class="card col-12-sm">
             <div class="img_container">
                 <img :src="`${state.coverUrl}${movie.poster_path}`" alt="">
