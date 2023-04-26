@@ -5,3 +5,25 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## G9it commands
+
+Add to staging 
+```bash
+
+git add .
+```
+adds all edited files in the staging area
+
+
+Add a commit message
+
+```bash
+git commit -m"add your commit message"
+```
+
+push to remote
+
+```bash
+git push
+
+```

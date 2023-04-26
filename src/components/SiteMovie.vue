@@ -28,8 +28,6 @@ export default {
                     <div>{{ state.roundNumber(movie.vote_average) }} ⭐️</div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </template>
